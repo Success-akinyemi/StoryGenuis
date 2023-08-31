@@ -1,0 +1,120 @@
+.dashboard{
+    width: 100vw;
+    overflow-x: hidden;
+    
+    display: flex;
+    position: relative;
+    background: var(--page-bg);
+}
+
+
+  /* POPUP COMPONENT */
+  
+  .dashboard .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: top 0.3s ease-in-out;
+    z-index: 9999;
+  }
+  
+  .dashboard .popup.active {
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .dashboard .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+  }
+  
+  .dashboard .popup-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .dashboard .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .dashboard .popup-close:hover {
+    opacity: 0.8;
+  }
+
+/**  END POPUP COMPONENT */
+
+.dashboard .content{
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard .content h2{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dashboard .content h2 span{
+    color: rgb(219, 219, 219);
+}
+
+.dashboard .content .container{
+    margin-top: 100px;
+    width: 50%;
+    height: auto;
+    background: linear-gradient(to top left, rgb(10, 174, 207), rgb(126, 5, 74));   
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.dashboard .content .container .wand{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.dashboard .content .container h2{
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.dashboard .content .container p{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.dashboard .link{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .dashboard .content .container{
+    width: 90%;
+  }
+}

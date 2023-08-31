@@ -1,0 +1,95 @@
+.storyAiPopup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    height: 100vh;
+}
+
+.storyAiPopup .linkai{
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+}
+
+.storyAiPopup .left,
+.storyAiPopup .right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(34, 34, 34, 0.8);
+    border-radius: 5px;
+}
+
+.storyAiPopup .left{
+    cursor: pointer;
+}
+
+.storyAiPopup .img-container{
+    width: 250px;
+    height: 300px;
+}
+
+.storyAiPopup .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.storyAiPopup span{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    color: var(--text-color-1);
+}
+
+.storyAiPopup span h2{
+    font-size: 19px;
+}
+
+.storyAiPopup span p{
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.storyAiPopup .btnai{
+    width: 100%;
+    background: purple;
+    padding: 8px;
+    font-size: 17px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.storyAiPopup .btnai:hover{
+    background: rgb(68, 1, 68);
+}
+
+.storyAiPopup .pro{
+    background: orange;
+    transition: 0.3s ease;
+}
+
+.storyAiPopup .pro:hover{
+    background: rgb(214, 140, 3);
+}
+
+@media screen and (max-width: 450px){
+    .storyAiPopup{
+        flex-direction: column;
+        overflow-x: scroll;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}

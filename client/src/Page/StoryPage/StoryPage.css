@@ -1,0 +1,15 @@
+.storyPage {
+    background: var(--page-bg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: auto;
+}
+
+.storyPage h2{
+    margin-top: 75px;
+    margin-bottom: 40px;
+    font-size: 35px;
+}

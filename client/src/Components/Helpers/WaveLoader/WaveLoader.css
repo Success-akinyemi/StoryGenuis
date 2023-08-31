@@ -1,0 +1,53 @@
+.waveLoader{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.waveLoader .stroke{
+    display: block;
+    position: relative;
+    background: #04fe4d;  
+    width: 10px;
+    height: 100%;
+    border-radius: 50px;
+    margin: 0 5px;
+    animation: waveAnimation 1.2s linear infinite;
+}
+
+@keyframes waveAnimation {
+    50%{
+        height: 20%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.waveLoader .stroke:nth-child(1){
+    animation-delay: 0s;
+}
+
+.waveLoader .stroke:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.waveLoader .stroke:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+.waveLoader .stroke:nth-child(4){
+    animation-delay: 0.9s;
+}
+
+.waveLoader .stroke:nth-child(5){
+    animation-delay: 0.6s;
+}
+
+.waveLoader .stroke:nth-child(6){
+    animation-delay: 0.3s;
+}
+
+.waveLoader .stroke:nth-child(7){
+    animation-delay: 0s;
+}

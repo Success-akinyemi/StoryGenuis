@@ -1,0 +1,281 @@
+.dashboardNavbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.dashNav{
+    height: 70px;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashNav .logo{
+    display: flex;
+    align-items: center;
+}
+
+.dashNav .logo .link{
+    padding-left: 10px;
+
+}
+
+.dashNav .menu{
+    display: flex;
+    align-items: center;
+}
+
+.link{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.outer{
+    margin: 0 20px;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    position: relative;
+}
+
+.button{
+    height: 50px;
+    width: 200px;
+    /*
+    height: 70px;
+    width: 220px;
+    */
+    border-radius: 50px;
+}
+
+.outer button, .outer span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outer button{
+    background: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.button button{
+    height: 40px;
+    width: 190px;
+    border-radius: 50px;
+}
+
+.outer span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.button span{
+    border-radius: 50px;
+}
+
+.outer span:nth-child(1){
+    filter: blur(7px);
+}
+
+.outer span:nth-child(2){
+    filter: blur(14px);
+}
+
+.outer{
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+.dashNav .menu .outer2{
+    margin: 0 20px;
+    background: #111;
+    position: relative;
+}
+
+.dashNav .menu .button2{
+    height: 50px;
+    width: 200px;
+    /*
+    height: 70px;
+    width: 220px;
+    */
+    border-radius: 50px;
+}
+
+.dashNav .menu .outer2 button, .dashNav .menu .outer2 span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dashNav .menu .outer2 button{
+    background: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.button2 button{
+    height: 40px;
+    width: 190px;
+    border-radius: 50px;
+}
+
+.outer2 span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.button2 span{
+    border-radius: 50px;
+}
+
+.outer2:hover span:nth-child(1){
+    filter: blur(7px);
+}
+
+.outer2:hover span:nth-child(2){
+    filter: blur(14px);
+}
+
+.outer2:hover{
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.signout span{
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 50px;
+    perspective: 1000px;
+  }
+  .signout span h4{
+    font-size: 15px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .signout span h4:before,
+  .signout span h4:after{
+    position: absolute;
+    content: "Sign Out";
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #111;
+    box-sizing: border-box;
+  }
+  .signout span:nth-child(1) h4:before{
+    color: #f2f2f2;
+    background: #111;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .signout span:nth-child(1) h4:after{
+    color: #f2f2f2;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+
+  .signout span:nth-child(1) h4:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+.dashboardNavbar .menuBtn{
+    display: none;
+}
+
+.dashboardNavbar .closeBtn{
+    display: none;
+} 
+
+
+  @media screen and (max-width: 768px) {
+    .dashNav .menu{
+        position: fixed;
+        flex-direction: column;
+        background: black;
+        top: 25px;
+        right: -100%;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        z-index: 20;
+        gap: 20px;
+        border-radius: 10px;
+        display: none;
+        animation: showMenu 400ms ease forwards;
+    } 
+
+    @keyframes showMenu {
+        to{
+            right: 20px;
+        }
+    }
+
+    .dashNav .menu.menu-open{
+        display: flex;
+    }
+
+    .dashboardNavbar .closeBtn{
+        display: inline-block;
+        color: white;
+        cursor: pointer;
+        margin-left: 14rem;
+        font-size: 30px;
+    } 
+
+    .dashboardNavbar .menuBtn{
+        display: block;
+        cursor: pointer;
+    }
+}
+

@@ -1,0 +1,277 @@
+.createStory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(98, 97, 97);
+    width: 650px;
+    margin-top: 20px;
+    color: var(--text-color-1);
+    max-height: 93vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+.createStory::-webkit-scrollbar{
+    width: 0.5vw;
+}
+
+.createStory::-webkit-scrollbar-thumb{
+    background: var(--text-color-1);
+    border-radius: 20px;
+}
+
+.createStory::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 20px;
+}
+
+.createStory h2{
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.createStory .balance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.createStory .balance .link{
+    color: var(--text-color-1);
+    font-size: 14px;
+    font-weight: 600;
+    background: purple;
+    padding: 3px 10px;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.createStory .cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 95%;
+}
+
+.createStory .cards .card{
+    flex: 1;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.createStory .cards .card.selected{
+    border: 5px solid var(--text-color-1);
+}
+
+.createStory textarea{
+    margin-top: 20px;
+    width: 95%;
+    background: transparent;
+    color: var(--text-color-1);
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    outline: none;
+    resize: none;
+    min-height: 150px;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.createStory textarea::placeholder{
+    color: var(--border-color);
+}
+
+.createStory .selectOpt{
+    width: 93%;
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.createStory .selectOpt .select{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.createStory .selectOpt .select span{
+    font-size: 12;
+    margin-bottom: 5px;
+}
+
+.createStory .selectOpt .select select{
+    padding: 15px;
+    background: transparent;
+    color: var(--text-color-1);
+    font-size: 17px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.createStory .selectOpt .select select option{
+    background: rgb(98, 97, 97);
+}
+
+.createStory .chapters{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createStory .chapters p{
+    font-size: 18px;
+}
+
+.createStory .chapters input{
+    border: 2px solid var(--border-color);
+    padding: 10px;
+    background: transparent;
+    color: var(--text-color-1);
+    font-size: 19px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.createStory .chapters input::placeholder{
+    color: var(--text-color-1);
+}
+
+.createStory .required-credit{
+    margin-top: 20px;
+    background: rgb(209, 136, 1);
+    padding: 10px;
+    font-size: 19px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createStory .btn{
+    margin-top: 60px;
+}
+
+.createStory .btn button{
+    padding: 18px 23px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    gap: 10px;
+
+    color: white;
+}
+
+.createStory .storyBtn{
+    margin-top: 50px;
+    height: 60px;
+    width: 400px;
+    position: relative;
+    background: rgba(16, 16, 16, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    border-top: 0.5px solid rgba(16, 16, 16, 0.65);
+    border-left: 0.5px solid rgba(16, 16, 16, 0.65);
+    padding-left: 40px;
+    color: rgb(168, 166, 166);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.createStory .storyBtn:hover{
+    padding-left: 0px;
+    padding-right: 40px;
+    color: white;
+}
+
+.createStory .storyBtn .innerSpan{
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: #04fe4d;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a191d;
+}
+
+.createStory .storyBtn .innerSpan .icon{
+    font-size: 1.8rem;
+}
+
+.createStory .storyBtn:hover .innerSpan{
+    left: calc(100% - 55px);
+}
+
+.createStory .storyBtn .link{
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createStory .storyBtn::after{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    z-index: 1;
+    background: rgba(154, 153, 153, 0.4);
+    transform: translateX(-270px) skewX(30deg);
+    transition: 1s ease-in-out;
+}
+
+.createStory .storyBtn:hover::after{
+    transform: translateX(270px) skewX(30deg);
+}
+
+@media screen and (max-width: 450px){
+    .createStory{
+        width: 100%;
+    }
+
+    .createStory .cards .card{
+        padding: 7px 10px;
+        font-size: 15px;
+    }
+
+    .createStory .balance{
+        flex-direction: column;
+    }
+
+    .createStory textarea{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .createStory .selectOpt{
+        width: 100%;
+    }
+
+    .createStory .required-credit{
+        font-size: 17px;
+    }
+}
