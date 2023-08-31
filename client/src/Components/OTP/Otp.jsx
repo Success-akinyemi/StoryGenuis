@@ -4,6 +4,7 @@ import { useAuthStore } from '../../store/store'
 import { useEffect, useState } from 'react'
 import { generateOTP, verifyOTP } from '../../helpers/helper'
 import { useNavigate } from 'react-router-dom'
+import VpnKeyIcon from '@mui/icons-material/VpnKey';
 
 
 function Otp() {
@@ -52,15 +53,16 @@ function Otp() {
   return (
     <div className='otpContainer'>
         <Toaster position='top-center' reverseOrder={false}></Toaster>
-        <div className='box'>
-          <div className="form">
+        <section>
+        <div className="form">
             <h2>Recovery</h2>
             <p>Enter OTP to reset your password</p>
             <h5>Check Spam folder also.</h5>
             <form onSubmit={onSubmit}>
               <div className="inputBox">
+              <span className='icon'><VpnKeyIcon /></span>
                 <input onChange={(e) => setOTP(e.target.value) } type='text' />
-                <span>OTP:</span>
+                <label>OTP:</label>
               </div>
                 <button type='submit'>Processed</button>
             </form>
@@ -68,7 +70,8 @@ function Otp() {
               <p>Could not get OTP? <button onClick={resendOTP} className='otpBtn'>Resend</button></p>
             </div>
           </div>
-        </div>
+        </section>
+
     </div>
   )
 }

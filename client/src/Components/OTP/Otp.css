@@ -1,0 +1,119 @@
+.otpContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: url('../../assest/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: formAnimation 5s linear infinite;
+}
+
+@keyframes formAnimation {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.otpContainer .form{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+}
+
+.otpContainer .form h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.otpContainer .inputBox{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.otpContainer label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.otpContainer input:focus~label,
+.otpContainer input:valid~label{
+    top: -5px;
+}
+
+.otpContainer input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 40px 0 5px;
+}
+
+.otpContainer .icon{
+    position: absolute;
+    right: 8px;
+    bottom: -18px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+.otpContainer .signUpLink{
+    margin-top: 50px;
+}
+
+.otpContainer .signUpLink span{
+    font-weight: 600;
+}
+
+.otpContainer button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.4em;
+    color: #000;
+    font-family: 500;
+}
+
+.otpContainer .links p{
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 360px) {
+    .otpContainer .form{
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    .otpContainer .inputBox{
+        width: 330px;
+    }
+}
