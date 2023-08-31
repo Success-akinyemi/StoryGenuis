@@ -1,9 +1,10 @@
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 
-axios.defaults.baseURL = 'http://localhost:9000'
-//'http://localhost:9000'
-//'https://mediplus-backend-server.onrender.com'
+//axios.defaults.baseURL = 'http://localhost:9000'
+axios.defaults.baseURL = 'https://storygenuis.onrender.com'
+
+
 
 /**Make API Request */
 

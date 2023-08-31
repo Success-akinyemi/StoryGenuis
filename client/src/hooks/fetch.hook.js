@@ -2,7 +2,9 @@ import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { getEmail } from '../helpers/helper'
 
-axios.defaults.baseURL = 'http://localhost:9000'
+//axios.defaults.baseURL = 'http://localhost:9000'
+axios.defaults.baseURL = 'https://storygenuis.onrender.com'
+
 
 
 /**Custom Hooks */
