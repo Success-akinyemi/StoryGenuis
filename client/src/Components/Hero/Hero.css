@@ -1,6 +1,7 @@
 .hero{
     width: 100vw;
     overflow: hidden;
+    margin-top: 70px;
 }
 
 .hero-container{
