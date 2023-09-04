@@ -1,11 +1,10 @@
 .hero{
     width: 100vw;
     overflow: hidden;
-    margin-top: 70px;
 }
 
 .hero-container{
-    margin-top: 75px;
+    margin-top: 100px;
     height: 100vh;
     position: relative;
     background: url('../../assest/bg-3.jpg');
